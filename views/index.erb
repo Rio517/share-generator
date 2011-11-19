@@ -1,0 +1,163 @@
+<div class="textCenter">
+  <h1 class="textCenter">Share Code Generator</h1>
+  <p>Enter your share language below to generate the HTML to be used on the page.</p>
+  <p>
+    <a href="#facebook_share">Facebook</a> | 
+    <a href="#twitter_share">Twitter</a> | 
+    <a href="#email_share">Email</a> | 
+    <a href="#buzz_share">Buzz</a>
+  </p>
+</div>
+
+<div id="facebook_share" class="bottomBorder">
+  <h2>Facebook</h2>
+  <table>
+    <tr>
+      <td width="50%" valign="top" class="left-col">
+        <p>Site Name</p>
+        <input type="text" id="fb_site_name" value=""><br />
+        <p>Title</p>
+        <input type="text" id="fb_title" value=""><br />
+        <p>Description</p>
+        <textarea id="fb_description" rows="3"></textarea><br />
+        <p>Content Type</p>
+        <select id="fb_content_type">
+          <option value="">Select One</option>
+          <option value="activity">activity</option>
+          <option value="actor">actor</option>
+          <option value="album">album</option>
+          <option value="article">article</option>
+          <option value="athlete">athlete</option>
+          <option value="author">author</option>
+          <option value="band">band</option>
+          <option value="bar">bar</option>
+          <option value="blog">blog</option>
+          <option value="book">book</option>
+          <option value="cafe">cafe</option>
+          <option value="cause">cause</option>
+          <option value="city">city</option>
+          <option value="company">company</option>
+          <option value="country">country</option>
+          <option value="director">director</option>
+          <option value="drink">drink</option>
+          <option value="food">food</option>
+          <option value="game">game</option>
+          <option value="government">government</option>
+          <option value="hotel">hotel</option>
+          <option value="landmark">landmark</option>
+          <option value="movie">movie</option>
+          <option value="musician">musician</option>
+          <option value="non_profit">non_profit</option>
+          <option value="politician">politician</option>
+          <option value="product">product</option>
+          <option value="public_figure">public_figure</option>
+          <option value="restaurant">restaurant</option>
+          <option value="school">school</option>
+          <option value="song">song</option>
+          <option value="sport">sport</option>
+          <option value="sports_league">sports_league</option>
+          <option value="sports_team">sports_team</option>
+          <option value="state_province">state_province</option>
+          <option value="tv_show">tv_show</option>
+          <option value="university">university</option>
+          <option value="website">website</option>
+        </select>
+        <p>Facebook Share Image URL</p>
+        <input type="text" id="fb_img" value=""><br />
+        <p>Page URL</p>
+        <input type="text" id="fb_url" value=""><br />
+        <br />
+        <p>Icon Type</p>
+        <select id="fb_type">
+          <option value="">Just my Link</a>
+          <option value="icon_link">Icon + Link</a>
+          <option value="icon">Icon only</a>
+          <option value="button">Button containing link text</a>
+        </select>
+        <br /><br />
+        <button class="thoughtbot" onclick="shareFB()">Generate Facebook Share Code</button>
+      </td>
+      <td width="50%" valign="top">
+        <p>Meta Tags</p><textarea id="fb_metatags" rows="8"></textarea><br />
+        <p>Share Link and/or Share Link</p><textarea id="fb_link" rows="5"></textarea>
+        <p id="sample_link"></p>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="twitter_share" class="bottomBorder">
+  <h2>Twitter</h2>
+  <table>
+    <tr>
+      <td width="50%" valign="top" class="left-col">
+        
+        <p>Tweet Text</p>
+        <textarea id="tw_tweet" rows="2"></textarea>
+        <br />
+        <p>Simple or Web Intent?</p>
+        <select id="twType">
+          <option value="0">Simple Share</option>
+          <option value="1">Twitter Intent</option>
+        </select>
+        <br /><br />
+        <button class="thoughtbot" onclick="shareTW()">Generate Twitter Share Code</button>
+      </td>
+      <td width="50%" valign="top">
+        <p>Twitter Link</p>
+        <textarea id="tw_link" rows="3"></textarea>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="email_share" class="bottomBorder">
+  <h2>Email</h2>
+  <table>
+    <tr>
+      <td width="50%" valign="top" class="left-col">
+        <p>Subject</p>
+        <input type="text" id="email_subject" value="">
+        <br />
+        <p>Body</p>
+        <textarea id="email_body" rows="5"></textarea>
+        <br />
+        <br />
+        <button class="thoughtbot" onclick="shareEmail()">Generate Email Share Code</button>
+      </td>
+      <td width="50%" valign="top">
+        <p>Email Link</p><textarea id="email_link" rows="6"></textarea>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div id="buzz_share" class="bottomBorder">
+  <h2>Buzz</h2>
+  <table>
+    <tr>
+      <td width="50%" valign="top" class="left-col">
+        
+        <p>Title</p>
+        <input type="text" id="buzz_title" value="">
+        <br />
+        <p>Snippet</p>
+        <textarea id="buzz_snippet" rows="3"></textarea>
+        <br />
+        <p>Source Home Page (for example, http://www.barackobama.com)</p>
+        <input type="text" id="buzz_homepage" value="">
+        <br />
+        <p>Source Name ("Organizing for America", "The Democratic Party", etc)</p>
+        <input type="text" id="buzz_src" value="">
+        <br />
+        <p>Page Shortcut URL</p><input type="text" id="buzz_url" value="">
+        <br />
+        <br />
+        <button class="thoughtbot" onclick="shareBuzz()">Generate Buzz Share Code</button>
+      </td>
+      <td width="50%" valign="top">
+        <p>Buzz Link</p>
+        <textarea id="buzz_link" rows="10"></textarea>
+      </td>
+    </tr>
+  </table>
+</div>
