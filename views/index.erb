@@ -9,18 +9,24 @@
   </p>
 </div>
 
-<div id="facebook_share" class="bottomBorder">
+<div id="facebook_share" class="colWrap bottomBorder">
   <h2>Facebook</h2>
-  <table>
-    <tr>
-      <td width="50%" valign="top" class="left-col">
-        <p>Site Name</p>
-        <input type="text" id="fb_site_name" value=""><br />
-        <p>Title</p>
-        <input type="text" id="fb_title" value=""><br />
-        <p>Description</p>
-        <textarea id="fb_description" rows="3"></textarea><br />
-        <p>Content Type</p>
+  <div class="col50p">
+    <ul>
+      <li>
+        <label>Site Name</label>
+        <input type="text" id="fb_site_name" value="" />
+      </li>
+      <li>
+        <label>Link Title</label><br />
+        <input type="text" id="fb_title" value="" />
+      </li>
+      <li>
+        <label>Description</label>
+        <textarea id="fb_description" rows="3"></textarea>
+      </li>
+      <li>
+        <label>Content Type</label>
         <select id="fb_content_type">
           <option value="">Select One</option>
           <option value="activity">activity</option>
@@ -62,102 +68,140 @@
           <option value="university">university</option>
           <option value="website">website</option>
         </select>
-        <p>Facebook Share Image URL</p>
-        <input type="text" id="fb_img" value=""><br />
-        <p>Page URL</p>
-        <input type="text" id="fb_url" value=""><br />
-        <br />
-        <p>Icon Type</p>
+      </li>
+      <li>
+        <label>Facebook Share Image URL</label>
+        <input type="text" id="fb_img" value="" />
+      </li>
+      <li>
+        <label>Page URL</label>
+        <input type="text" id="fb_url" value="" />
+      </li>
+      <li>
+        <label>Icon Type</label>
         <select id="fb_type">
-          <option value="">Just my Link</a>
+          <option value="web_link">Just website link</a>
+            <option value="email_link">Just email link</a>
           <option value="icon_link">Icon + Link</a>
           <option value="icon">Icon only</a>
           <option value="button">Button containing link text</a>
         </select>
-        <br /><br />
+      </li>
+      <li>
         <button class="thoughtbot" onclick="shareFB()">Generate Facebook Share Code</button>
-      </td>
-      <td width="50%" valign="top">
-        <p>Meta Tags</p><textarea id="fb_metatags" rows="8"></textarea><br />
-        <p>Share Link and/or Share Link</p><textarea id="fb_link" rows="5"></textarea>
-        <p id="sample_link"></p>
-      </td>
-    </tr>
-  </table>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col50p">
+    <ul>
+      <li>
+        <label>Meta Tags</label>
+        <textarea id="fb_metatags" rows="8"></textarea>
+      </li>
+      <li>
+        <label>Share Link and/or Share Link</label>
+        <textarea id="fb_link" rows="5"></textarea>
+      </li>
+      <li><p id="sample_link"></p></li>
+    </ul>
+  </div>
 </div>
-<div id="twitter_share" class="bottomBorder">
+
+
+<div id="twitter_share" class="colWrap bottomBorder">
   <h2>Twitter</h2>
-  <table>
-    <tr>
-      <td width="50%" valign="top" class="left-col">
-        
-        <p>Tweet Text</p>
+  <div class="col50p">
+    <ul>
+      <li>
+        <label>Tweet Text</label>
         <textarea id="tw_tweet" rows="2"></textarea>
-        <br />
-        <p>Simple or Web Intent?</p>
+      </li>
+    
+      <li>
+        <label>Simple or Web Intent?</label>
         <select id="twType">
           <option value="0">Simple Share</option>
           <option value="1">Twitter Intent</option>
         </select>
-        <br /><br />
+      </li>
+    
+      <li>
         <button class="thoughtbot" onclick="shareTW()">Generate Twitter Share Code</button>
-      </td>
-      <td width="50%" valign="top">
-        <p>Twitter Link</p>
+      </li>
+    </ul>
+  </div>
+  <div class="col50p">
+    <ul>
+      <li>
+        <label>Twitter Link</label>
         <textarea id="tw_link" rows="3"></textarea>
-      </td>
-    </tr>
-  </table>
+      </li>
+    </ul>
+  </div>
 </div>
 
-<div id="email_share" class="bottomBorder">
+<div id="email_share" class="colWrap bottomBorder">
   <h2>Email</h2>
-  <table>
-    <tr>
-      <td width="50%" valign="top" class="left-col">
-        <p>Subject</p>
-        <input type="text" id="email_subject" value="">
-        <br />
-        <p>Body</p>
+  <div class="col50p"> 
+    <ul>
+      <li>
+        <label>Email Subject</label>
+        <input type="text" id="email_subject" value="" />
+      </li>
+      
+      <li> 
+        <label>Email Body</label>
         <textarea id="email_body" rows="5"></textarea>
-        <br />
-        <br />
+      </li>
+      <li>
         <button class="thoughtbot" onclick="shareEmail()">Generate Email Share Code</button>
-      </td>
-      <td width="50%" valign="top">
-        <p>Email Link</p><textarea id="email_link" rows="6"></textarea>
-      </td>
-    </tr>
-  </table>
+      </li>
+    </ul>
+  </div>
+  <div class="col50p">
+    <ul>
+      <li><label>Email Link</label><textarea id="email_link" rows="6"></textarea></li>
+    </ul>
+  </div>
+
 </div>
 
-<div id="buzz_share" class="bottomBorder">
+<div id="buzz_share" class="colWrap bottomBorder">
   <h2>Buzz</h2>
-  <table>
-    <tr>
-      <td width="50%" valign="top" class="left-col">
-        
-        <p>Title</p>
-        <input type="text" id="buzz_title" value="">
-        <br />
-        <p>Snippet</p>
+  <div class="col50p"> 
+    <ul>
+      <li>
+        <label>Title</label><br />
+        <input type="text" id="buzz_title" value="" />
+      </li>
+      <li>
+        <label>Snippet</label><br />
         <textarea id="buzz_snippet" rows="3"></textarea>
-        <br />
-        <p>Source Home Page (for example, http://www.barackobama.com)</p>
-        <input type="text" id="buzz_homepage" value="">
-        <br />
-        <p>Source Name ("Organizing for America", "The Democratic Party", etc)</p>
-        <input type="text" id="buzz_src" value="">
-        <br />
-        <p>Page Shortcut URL</p><input type="text" id="buzz_url" value="">
-        <br />
-        <br />
+      </li>
+      <li>
+        <label>Source Home Page</label>
+        <input type="text" id="buzz_homepage" value="" />
+      </li>
+      <li>
+        <label>Source Name</label>
+        <input type="text" id="buzz_src" value="" />
+      </li>
+      <li>
+        <label>Page Shortcut URL</label>
+        <input type="text" id="buzz_url" value="" />
+      </li>
+      <li>
         <button class="thoughtbot" onclick="shareBuzz()">Generate Buzz Share Code</button>
-      </td>
-      <td width="50%" valign="top">
-        <p>Buzz Link</p>
+      </li>
+    </ul>
+  </div>
+  <div class="col50p">
+    <ul>
+      <li>
+        <label>Buzz Link</label><br />
         <textarea id="buzz_link" rows="10"></textarea>
-      </td>
-    </tr>
-  </table>
+      </li>
+    </ul>
+  </div>     
 </div>
