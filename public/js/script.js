@@ -72,17 +72,3 @@ $(document).ready(function(){
     var link = '<a class="email_link" target="_blank" href="mailto:?subject=' + escape(subject) + '&body=' + escape(body) + '">INSERT LINK CONTENTS HERE</a>';
     $('#email_link').val(link);
   }
-  
-  function shareBuzz() {
-    var url = $('#buzz_url').val();
-    var title = $('#buzz_title').val();
-    var snippet = $('#buzz_snippet').val();
-    var src = $('#buzz_src').val();
-    var homepage = $('#buzz_homepage').val();
-    title = escape(title);
-    title = title.replace(/%20/g,'+');
-    snippet = escape(snippet);
-    snippet = snippet.replace(/%20/g,'+');
-    var link = '<a href="http://www.google.com/reader/link?url=' + url + '&title=' + title + '&snippet=' + snippet + '&srcUrl=' + homepage + '&srcTitle=' + src + '" target="_blank">INSERT LINK CONTENTS HERE</a>';
-    $('#buzz_link').val(link);
-  }
