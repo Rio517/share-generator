@@ -152,7 +152,7 @@ div.field,div.actions{margin-bottom:10px}
   background:-moz-linear-gradient(top, #f37873 0%, #db504d 50%, #cb0500 50%, #a20601 100%);
   background:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #f37873), color-stop(0.5, #db504d), color-stop(0.5, #cb0500), color-stop(1, #a20601));
   cursor:pointer;
-  color:#4D8FCF;
+  color:#aaa;
 }
 
 .thoughtbot:active {
