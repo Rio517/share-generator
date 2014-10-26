@@ -1,0 +1,235 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Share Code Generator</title>
+
+  <link rel="canonical" href="http://sharecodegenerator.com/"/>
+  <meta name="description" content="Generate share links for Facebook, Twitter and Email!">
+  <meta property="og:title" content="Share Code Generator" />
+  <meta property="og:description" content="Generate share links for Facebook, Twitter and Email!" />
+  <meta property="og:site_name" content="Share Code Generator"><meta property="og:type" content="website">
+
+
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- end CSS-->
+
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1 class="textCenter">Share Code Generator</h1>
+    </header>
+    <div id="main" role="main">
+    <div class="textCenter">
+      <p>Enter your share language below to generate the HTML to be used on the page.</p>
+      <p>
+        <a href="#facebook_share">Facebook</a> |
+        <a href="#twitter_share">Twitter</a> |
+        <a href="#email_share">Email</a> |
+        <a href="#buzz_share">Buzz</a>
+      </p>
+    </div>
+
+    <div id="facebook_share" class="colWrap bottomBorder">
+      <h2>Facebook</h2>
+      <div class="col50p">
+        <ul>
+          <li>
+            <label>Site Name</label>
+            <input type="text" id="fb_site_name" value="" />
+          </li>
+          <li>
+            <label>Link Title</label><br />
+            <input type="text" id="fb_title" value="" />
+          </li>
+          <li>
+            <label>Description</label>
+            <textarea id="fb_description" rows="3"></textarea>
+          </li>
+          <li>
+            <label>Content Type</label>
+            <select id="fb_content_type">
+              <option value="">Select One</option>
+              <option value="activity">activity</option>
+              <option value="actor">actor</option>
+              <option value="album">album</option>
+              <option value="article">article</option>
+              <option value="athlete">athlete</option>
+              <option value="author">author</option>
+              <option value="band">band</option>
+              <option value="bar">bar</option>
+              <option value="blog">blog</option>
+              <option value="book">book</option>
+              <option value="cafe">cafe</option>
+              <option value="cause">cause</option>
+              <option value="city">city</option>
+              <option value="company">company</option>
+              <option value="country">country</option>
+              <option value="director">director</option>
+              <option value="drink">drink</option>
+              <option value="food">food</option>
+              <option value="game">game</option>
+              <option value="government">government</option>
+              <option value="hotel">hotel</option>
+              <option value="landmark">landmark</option>
+              <option value="movie">movie</option>
+              <option value="musician">musician</option>
+              <option value="non_profit">non_profit</option>
+              <option value="politician">politician</option>
+              <option value="product">product</option>
+              <option value="public_figure">public_figure</option>
+              <option value="restaurant">restaurant</option>
+              <option value="school">school</option>
+              <option value="song">song</option>
+              <option value="sport">sport</option>
+              <option value="sports_league">sports_league</option>
+              <option value="sports_team">sports_team</option>
+              <option value="state_province">state_province</option>
+              <option value="tv_show">tv_show</option>
+              <option value="university">university</option>
+              <option value="website">website</option>
+            </select>
+          </li>
+          <li>
+            <label>Facebook Share Image URL</label>
+            <input type="text" id="fb_img" value="" />
+          </li>
+          <li>
+            <label>Page URL</label>
+            <input type="text" id="fb_url" value="" />
+          </li>
+          <li>
+            <label>Icon Type</label>
+            <select id="fb_type">
+              <option value="web_link">Just website link</a>
+                <option value="email_link">Just email link</a>
+              <option value="icon_link">Icon + Link</a>
+              <option value="icon">Icon only</a>
+              <option value="button">Button containing link text</a>
+            </select>
+          </li>
+          <li>
+            <button class="thoughtbot" onclick="shareFB()">Generate Facebook Share Code</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col50p">
+        <ul>
+          <li>
+            <label>Meta Tags</label>
+            <textarea id="fb_metatags" rows="8"></textarea>
+          </li>
+          <li>
+            <label>Share Link and/or Share Link</label>
+            <textarea id="fb_link" rows="5"></textarea>
+          </li>
+          <li><p id="sample_link"></p></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="twitter_share" class="colWrap bottomBorder">
+      <h2>Twitter</h2>
+      <div class="col50p">
+        <ul>
+          <li>
+            <label>Tweet Text</label>
+            <textarea id="tw_tweet" rows="2"></textarea>
+          </li>
+
+          <li>
+            <label>Simple or Web Intent?</label>
+            <select id="twType">
+              <option value="1">Twitter Intent</option>
+              <option value="0">Simple Share</option>
+            </select>
+          </li>
+
+          <li>
+            <button class="thoughtbot" onclick="shareTW()">Generate Twitter Share Code</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col50p">
+        <ul>
+          <li>
+            <label>Twitter Link</label>
+            <textarea id="tw_link" rows="3"></textarea>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="email_share" class="colWrap bottomBorder">
+      <h2>Email</h2>
+      <div class="col50p">
+        <ul>
+          <li>
+            <label>Email Subject</label>
+            <input type="text" id="email_subject" value="" />
+          </li>
+
+          <li>
+            <label>Email Body</label>
+            <textarea id="email_body" rows="5"></textarea>
+          </li>
+          <li>
+            <button class="thoughtbot" onclick="shareEmail()">Generate Email Share Code</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col50p">
+        <ul>
+          <li><label>Email Link</label><textarea id="email_link" rows="6"></textarea></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <footer class="textCenter">
+    <p>This is a simple sinatra app. Feel free to update/contribute: Source on github: <a href="https://github.com/Rio517/share-generator">https://github.com/Rio517/share-generator</a></p>
+    <p>Updated by <a href="http://twitter.com/#!/rio517">Mario Olivio Flores</a>, from an earlier version by <a href="http://twitter.com/#!/dr_pugh">@dr_pugh</a>.</p>
+    <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a></p>
+    <p>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</p>
+  </footer>
+</div> <!--! end of #container -->
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+<script defer src="js/plugins.js"></script>
+<script defer src="js/script.js"></script>
+
+
+<script> // Change UA-XXXXX-X to be your site's ID
+  window._gaq = [['_setAccount','UA-27117633-1'],['_trackPageview'],['_trackPageLoadTime']];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  });
+</script>
+
+
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
+</body>
+</html>
